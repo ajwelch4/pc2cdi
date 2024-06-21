@@ -1,9 +1,6 @@
 plugins {
     application
-}
-
-repositories {
-    mavenCentral()
+    id("com.diffplug.spotless")
 }
 
 dependencies {
@@ -14,4 +11,10 @@ dependencies {
 
 application {
     mainClass.set("pc2cdi.App")
+}
+
+spotless {
+    java {
+        googleJavaFormat()
+    }
 }
